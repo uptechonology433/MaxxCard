@@ -81,7 +81,7 @@ const PageProductionReport: React.FC = () => {
 
     const ProductionReportRequests = async () => {
 
-        if (formValues.cardType === 'Tarja' || formValues.cardType === 'Chip') {
+        if (formValues.cardType === 'ChipPl' || formValues.cardType === 'ChipElo') {
 
             if (formValues.InitialProcessingDate < formValues.FinalProcessingDate
                 || formValues.InitialShippingDate < formValues.FinalShippingDate
@@ -158,9 +158,9 @@ const PageProductionReport: React.FC = () => {
 
                             <option selected>Selecione um tipo...</option>
 
-                            <option value="Tarja">Tarja</option>
+                            <option value="ChipPl">Chip PL</option>
 
-                            <option value="Chip">Chip</option>
+                            <option value="ChipElo">Chip ELO</option>
 
                         </Select>
 

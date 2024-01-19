@@ -100,7 +100,7 @@ const PageLoguin: React.FC = () => {
 
                     <div className="container-logos">
                         <div className="image-logo-client-red">
-                            <img src='https://firebasestorage.googleapis.com/v0/b/project-vero-card-up.appspot.com/o/LogoVerocard.svg?alt=media&token=dfa37f53-dd1d-4d6d-84ed-8a95fe4069b7' alt="Logo up" />
+                            <img src='https://www.megavalecard.com.br/wp-content/uploads/2023/02/Logo-Megavale-horizontal-colorido-texto-branco.png' alt="Logo up" />
 
                         </div>
                         <div className="image-logo-up">

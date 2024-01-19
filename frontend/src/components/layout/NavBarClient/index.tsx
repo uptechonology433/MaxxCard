@@ -18,7 +18,7 @@ const NavBarClient: React.FC = () => {
         <header>
             <nav>
                 <div className="image-logo-client-white">
-                    <img src='https://firebasestorage.googleapis.com/v0/b/project-vero-card-up.appspot.com/o/Logo-Vero-Card-White.png?alt=media&token=f6ec1ceb-9e8e-4098-b969-d379b50811a8' alt="Logo up" />
+                    <img src='https://www.megavalecard.com.br/wp-content/uploads/2023/02/Logo-Megavale-horizontal-colorido-texto-branco.png' alt="Logo up" />
                 </div>
                 <Icon name='menu' onClick={showSidebar} />
                 <ul className="nav-list">
