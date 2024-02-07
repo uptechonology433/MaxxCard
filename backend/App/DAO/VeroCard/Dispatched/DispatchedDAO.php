@@ -26,6 +26,7 @@ class DispatchedDAO extends Connection{
 
     }
 
+    //
 
     public function getAllDispatchedElo() : array {
 
