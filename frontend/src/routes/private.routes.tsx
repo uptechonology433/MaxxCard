@@ -31,8 +31,7 @@ const PrivateRouter: React.FC = () => {
                             <>
                                 < Route path={`${process.env.PUBLIC_URL}/usuarios`} element={< PageUsers />} />
                                {/*  < Route path={`${process.env.PUBLIC_URL}/emitidos`} element={< PageCardsIssued />} /> */}
-
-                            </>
+                           </>
 
                             :
                             null

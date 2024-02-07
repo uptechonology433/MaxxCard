@@ -23,6 +23,7 @@ const PageCardsIssued: React.FC = () => {
                     <option selected>Selecione um status...</option>
                     <option value="Tarja">Em produção</option>
                     <option value="Chip">Chip</option>
+                    
                 </Select>
 
             </div>

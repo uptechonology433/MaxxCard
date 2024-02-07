@@ -11,17 +11,31 @@ class AwaitingReleaseDAO extends Connection{
         parent::__construct();
     }
 
-    public function getAllAwaitingRelease() : array {
+    public function getAllAwaitingReleaseChip() : array {
 
         $productsAwaitingRelease = $this -> pdo
-            ->query("SELECT 
-            id_ordem_producao_status , 
-            id_op,  
-            to_char(dt_status, 'DD/MM/YYYY') AS dt_status,
-            to_char(dt_finalizado, 'DD/MM/YYYY') AS dt_finalizado
-            FROM ordem_producao_status WHERE id_cliente = 88 AND status = 0 AND finalizado = 0 
-            ORDER BY id_ordem_producao_status DESC ;") 
+            ->query("SELECT  * FROM view_megavale_AwaitingRelease_chip") 
             ->fetchAll(\PDO::FETCH_ASSOC);
+
+            foreach ($productsAwaitingRelease as &$product) {
+                $product['dt_processamento'] = date('d/m/Y', strtotime($product['dt_processamento']));
+              
+            }
+
+            return $productsAwaitingRelease;
+
+    }
+
+    public function getAllAwaitingReleaseElo() : array {
+
+        $productsAwaitingRelease = $this -> pdo
+            ->query("SELECT * from view_megavale_AwaitingRelease_elo;") 
+            ->fetchAll(\PDO::FETCH_ASSOC);
+
+            foreach ($productsAwaitingRelease as &$product) {
+                $product['dt_processamento'] = date('d/m/Y', strtotime($product['dt_processamento']));
+              
+            }
 
             return $productsAwaitingRelease;
 
