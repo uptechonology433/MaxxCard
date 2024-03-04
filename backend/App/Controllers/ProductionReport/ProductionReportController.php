@@ -52,7 +52,7 @@ final class ProductionReportController
             ->setFinalShippingdate(trim($data['expedicaoFinal']));
 
 
-        if (!empty(trim($data['tipo'])) &&  $data['tipo']  === 'Tarja') {
+        if (!empty(trim($data['tipo'])) &&  $data['tipo']  === 'ChipElo') {
 
             if (!empty(trim($data['arquivo']))) {
 
@@ -85,7 +85,7 @@ final class ProductionReportController
 
             }
 
-        } else if (!empty(trim($data['tipo'])) &&  $data['tipo']  === 'Chip') {
+        } else if (!empty(trim($data['tipo'])) &&  $data['tipo']  === 'ChipPl') {
             
             if (!empty(trim($data['arquivo']))) {
 

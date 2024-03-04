@@ -15,7 +15,7 @@ const PageHome: React.FC = () => {
     const [typeMessageAwaitingRelease, setTypeMessageAwaitingRelease] = useState(false);
     const [typeMessageAwaitingShipment, setTypeMessageAwaitingShipment] = useState(false);
     const [typeMessageDispatched, setTypeMessageDispatched] = useState(false);
-    const [formValues, setFormValues] = useState({ Type: "chip" });
+    const [formValues, setFormValues] = useState({ Type: "elo" });
 
 
     const handleChange = (e: any) => {
@@ -161,7 +161,7 @@ const PageHome: React.FC = () => {
 
             await api.get('/awaiting-release')
                 .then((data) => {
-                    if (formValues.Type === "chip") {
+                    if (formValues.Type === "elo") {
                         setAwaitingRelease(data.data[0]);
                     } else {
                         setAwaitingRelease(data.data[2]);
@@ -174,7 +174,7 @@ const PageHome: React.FC = () => {
             await api.get('/awaiting-shipment')
                 .then((data) => {
 
-                    if (formValues.Type === "chip") {
+                    if (formValues.Type === "elo") {
                         setAwaitingShipment(data.data[1]);
                     } else {
                         setAwaitingShipment(data.data[0]);
@@ -186,7 +186,7 @@ const PageHome: React.FC = () => {
 
             await api.get('/dispatched')
                 .then((data) => {
-                    if (formValues.Type === "chip") {
+                    if (formValues.Type === "elo") {
                         setDispatched(data.data[1]);
                     } else {
                         setDispatched(data.data[0]);
@@ -217,9 +217,10 @@ const PageHome: React.FC = () => {
 
             <Select info={"Selecione o tipo de cartão:"} name="Type" onChange={handleChange}>
 
+                <option value="elo">Elo</option>
                 <option value="chip">Chip</option>
 
-                <option value="elo">Elo</option>
+
 
             </Select>
 
