@@ -32,6 +32,21 @@ class ProductionDAO extends Connection
 
         foreach ($products as &$product) {
             $product['dt_processamento'] = date('d/m/Y', strtotime($product['dt_processamento']));
+
+            switch ($product['status']) {
+                case 6:
+                    $product['status'] = 'COFRE';
+                    break;
+                case 2:
+                    $product['status'] = 'PERSO';
+                    break;
+                case 3:
+                    $product['status'] = 'MANUSEIO';                
+                    break;
+                default:
+                    $product['status'] = 'desconhecido';
+                    break;
+            }
         }
 
         return $products;
