@@ -139,7 +139,7 @@ const PageLoguin: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <footer><p>Copyright 2023 © | Up Technology by Ezequiel Mathias</p></footer>
+            <footer><p className="developer">Copyright 2023 © | Up Technology by Rebeca Lopes</p></footer>
 
         </div>
     )

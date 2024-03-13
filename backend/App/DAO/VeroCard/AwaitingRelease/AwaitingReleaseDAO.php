@@ -14,7 +14,7 @@ class AwaitingReleaseDAO extends Connection{
     public function getAllAwaitingReleaseChip() : array {
 
         $productsAwaitingRelease = $this -> pdo
-            ->query("SELECT  * FROM view_megavale_AwaitingRelease_chip") 
+            ->query("SELECT  * FROM view_megavale_awaitingrelease_chip") 
             ->fetchAll(\PDO::FETCH_ASSOC);
 
             foreach ($productsAwaitingRelease as &$product) {
@@ -29,7 +29,7 @@ class AwaitingReleaseDAO extends Connection{
     public function getAllAwaitingReleaseElo() : array {
 
         $productsAwaitingRelease = $this -> pdo
-            ->query("SELECT * from view_megavale_AwaitingRelease_elo;") 
+            ->query("SELECT * from view_megavale_awaitingrelease_elo;") 
             ->fetchAll(\PDO::FETCH_ASSOC);
 
             foreach ($productsAwaitingRelease as &$product) {

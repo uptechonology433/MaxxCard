@@ -52,6 +52,11 @@ const PageHome: React.FC = () => {
             name: 'Quantidade de cartões',
             selector: (row: any) => row.total_cartoes,
             sortable: true
+        }, 
+        {
+            name: 'Etapa',
+            selector: (row: any) => row.status,
+            sortable: true
         },
     ];
 
@@ -152,23 +157,24 @@ const PageHome: React.FC = () => {
 
         const HomePageRequests = async () => {
 
-            await api.post('/production', { tipo: formValues.Type })
-                .then((data) => {
-                    setInProductionData(data.data)
-                }).catch(() => {
-                    setTypeMessageInProduction(true)
-                });
-
+           
             await api.get('/awaiting-release')
                 .then((data) => {
                     if (formValues.Type === "elo") {
-                        setAwaitingRelease(data.data[0]);
+                        setAwaitingRelease(data.data[1]);
                     } else {
-                        setAwaitingRelease(data.data[2]);
+                        setAwaitingRelease(data.data[0]);
                     }
                 })
                 .catch(() => {
                     setTypeMessageAwaitingRelease(true);
+                });
+
+                await api.post('/production', { tipo: formValues.Type })
+                .then((data) => {
+                    setInProductionData(data.data)
+                }).catch(() => {
+                    setTypeMessageInProduction(true)
                 });
 
             await api.get('/awaiting-shipment')
