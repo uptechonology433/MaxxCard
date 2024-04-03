@@ -82,7 +82,7 @@ const PageLogin: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <footer><p className="developer">Copyright 2024 © | Up Technology by Rebeca Lopes</p></footer>
+            <footer><p className="developer">Copyright 2024 © | UP! Technology by Rebeca Lopes</p></footer>
         </div>
     )
 }
