@@ -7,6 +7,7 @@
     justify-content: center;
     flex-direction: column;
     position: fixed;
+   
 
     p {
         font-size: clamp(0.9rem, 2vw, 1rem);
@@ -14,14 +15,14 @@
 
     .container-login {
         width: clamp(52.5rem, 70vw, 67.5rem);
-        height: 704px;
+        height: 90vh;
         background-color: $color-dark-gray;
         border-radius: 16px;
         display: flex;
 
         .container-style-uptechnology {
             width: clamp(25rem, 35vw, 33.75rem);
-            height: 672px;
+            height: 85vh;
             background-color: $color-faint-gray;
             border-radius: 16px;
             margin: 16px;
@@ -110,7 +111,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: 48px;
+                margin-top: 20px;
                 gap: 32px;
 
                 .input-name-user,
@@ -187,6 +188,7 @@
         text-align: center;
         color: $color-white;
         font-weight: $font-bold;
+       
 
         .developer{
             color: $color-client;
@@ -196,9 +198,7 @@
 
     @media(max-width: $breakpoint-small),
     (max-height: $breakpoint-medium) {
-        footer {
-            display: none;
-        }
+      
     }
 
 
