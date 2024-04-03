@@ -172,7 +172,6 @@ const PageUsers: React.FC = () => {
 
                                         <td>{user.email}</td>
 
-                                       
 
                                         <td>{user.admin == '0' ? 'NÃO' : 'SIM'}</td>
 
