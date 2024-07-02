@@ -14,7 +14,7 @@ class AwaitingShipmentDAO extends Connection{
     public function getAllAwaitingShipmentChip() : array {
 
         $productsAwaitingShipment = $this -> pdo
-            ->query("SELECT  * FROM view_megavale_AwaitingShipment_chip;") 
+            ->query("SELECT  * FROM view_max_card_AwaitingShipment_chip;") 
             ->fetchAll(\PDO::FETCH_ASSOC);
 
             foreach ($productsAwaitingShipment as &$product) {
@@ -32,7 +32,7 @@ class AwaitingShipmentDAO extends Connection{
     public function getAllAwaitingShipmentElo() : array {
 
         $productsAwaitingShipment = $this -> pdo
-            ->query(" SELECT * from view_megavale_AwaitingShipment_elo;") 
+            ->query(" SELECT * from view_max_card_AwaitingShipment_elo;") 
             ->fetchAll(\PDO::FETCH_ASSOC);
 
             foreach ($productsAwaitingShipment as &$product) {

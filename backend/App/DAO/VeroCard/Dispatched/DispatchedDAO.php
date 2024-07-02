@@ -14,7 +14,7 @@ class DispatchedDAO extends Connection{
     public function getAllDispatchedChip() : array {
 
         $productsDispatched = $this -> pdo
-            ->query("SELECT  * FROM view_megavale_dispatched_chip;") 
+            ->query("SELECT  * FROM view_max_card_dispatched_chip;") 
             ->fetchAll(\PDO::FETCH_ASSOC);
 
             foreach ($productsDispatched as &$product) {
@@ -31,7 +31,7 @@ class DispatchedDAO extends Connection{
     public function getAllDispatchedElo() : array {
 
         $productsDispatched  = $this -> pdo
-            ->query("SELECT * from view_megavale_dispatched_elo;") 
+            ->query("SELECT * from view_max_card_dispatched_elo;") 
             ->fetchAll(\PDO::FETCH_ASSOC);
 
             foreach ($productsDispatched as &$product) {

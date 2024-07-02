@@ -9,7 +9,7 @@
   } 
 
 header {
-    background-color: $color-client;
+    background-color: $color-white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +19,7 @@ header {
     top: 0%;
     z-index: 10;
     height: 72px;
+
 
     .image-logo-client-white {
         margin-left: clamp(1rem, 5vw, 4.375rem);
@@ -30,7 +31,7 @@ header {
 
     li:hover {
         cursor: pointer;
-        border-bottom: 3px solid $color-white;
+        border-bottom: 3px solid $color-client;
         transition: all 0.1s;
         transform: scale(1.1);
         margin-top: -3px;
@@ -45,7 +46,7 @@ header {
         justify-content: space-between;
 
         .icon {
-            color: $color-white;
+            color: $color-client;
             font-size: 35px;
             cursor: pointer;
             display: none;
@@ -73,7 +74,7 @@ header {
 
                 a {
                     text-decoration: none;
-                    color: $color-white;
+                    color: $color-client;
                 }
             } 
         }
@@ -111,7 +112,7 @@ header {
             justify-content: right;
 
             .icon {
-                color: $color-white;
+                color: $color-client;
                 font-size: 35px;
                 cursor: pointer;
 
