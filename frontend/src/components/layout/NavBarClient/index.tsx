@@ -18,7 +18,9 @@ const NavBarClient: React.FC = () => {
         <header>
             <nav>
                 <div className="image-logo-client-white">
+                    <a href='https://maxxcard.com.br'>
                     <img src='https://maxxcard.com.br/wp-content/uploads/2023/05/MARCA.svg' alt="Logo up" />
+                    </a>
                 </div>
                 <Icon name='menu' onClick={showSidebar} />
                 <ul className="nav-list">
