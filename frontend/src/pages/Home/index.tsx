@@ -47,45 +47,49 @@ const PageHome: React.FC = () => {
             selector: (row: any) => row.dt_processamento
         },
         {
-            name: 'Qtd cartões',
-            selector: (row: any) => row.total_cartoes
-        },
-        {
             name: 'SLA - D2',
             selector: (row: any) => row.sla
         },
+        {
+            name: 'Qtd cartões',
+            selector: (row: any) => row.total_cartoes
+        },
+     
 
     ];
 
     
     const columnsInProduction: Array<Object> = [
         {
-            name: 'Nome do arquivo',
+            name: 'Nome arquivo',
             selector: (row: any) => row.nome_arquivo_proc,
 
         },
         {
-            name: 'Codigo produto',
-            selector: (row: any) => row.cod_produto,
-            sortable: true
-        },
-   
-        {
             name: 'Desc do Produto',
             selector: (row: any) => row.desc_produto,
 
-
         },
         {
-            name: 'Data Pros',
+            name: 'Desc material',
+            selector: (row: any) => row.cod_produto,
+            sortable: true
+        },
+        {
+            name: 'Data processado',
             selector: (row: any) => row.dt_processamento
 
         },
         {
-            name: 'Quantidade de cartões',
+            name: 'SLA - D2',
+            selector: (row: any) => row.sla
+        },
+        {
+            name: 'Qtd cartões',
             selector: (row: any) => row.total_cartoes,
             sortable: true
         }, 
+      
         {
             name: 'Etapa',
             selector: (row: any) => row.status,
@@ -95,23 +99,26 @@ const PageHome: React.FC = () => {
 
     const columnsAwaitingShipment: Array<Object> = [
         {
-            name: 'Codigo do produto',
-            selector: (row: any) => row.cod_produto,
-            sortable: true
-        },
-        {
-            name: 'Nome do arquivo',
+            name: 'Nome arquivo',
             selector: (row: any) => row.nome_arquivo_proc
 
         },
         {
-            name: 'Desc do Produto',
+            name: 'Desc produto',
             selector: (row: any) => row.desc_produto
 
         },
         {
-            name: 'Data de entrada',
+            name: 'Desc material',
+            selector: (row: any) => row.cod_produto,
+            sortable: true
+        },
+        {
+            name: 'Data processado',
             selector: (row: any) => row.dt_processamento
+        },  {
+            name: 'SLA - D2',
+            selector: (row: any) => row.sla
         },
         {
             name: 'Qtd cartões',
