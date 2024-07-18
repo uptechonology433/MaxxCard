@@ -71,10 +71,7 @@ const PageProductionReport: React.FC = () => {
             name: 'Status',
             selector: (row: any) => row.dt_expedicao ? 'Expedido' : row.status
         },
-        {
-            name: 'Rastreio',
-            selector: (row: any) => row.rastreio
-        },
+  
     ];
 
 
@@ -191,7 +188,7 @@ const PageProductionReport: React.FC = () => {
                         column={columnsProductionReport}
                         data={ProductionReportData}
                         typeMessage={ProductionReportMessage}
-                        refExcel={refExcel}
+                     
                     />
 
                 }
