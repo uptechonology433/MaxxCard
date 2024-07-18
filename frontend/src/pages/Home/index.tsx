@@ -25,15 +25,43 @@ const PageHome: React.FC = () => {
         })
     }
 
-
-    const columnsInProduction: Array<Object> = [
+    const columnsAwaitingRelease: Array<Object> = [
         {
-            name: 'Codigo do produto',
-            selector: (row: any) => row.cod_produto,
-            sortable: true
+            name: 'Nome arquivo',
+            selector: (row: any) => row.nome_arquivo_proc
+
         },
         {
-            name: 'Nome do arquivo',
+            name: 'Desc produto',
+            selector: (row: any) => row.desc_produto
+
+        },
+        {
+            name: 'Desc material',
+            selector: (row: any) => row.id_tipo_material,
+            sortable: true
+        },
+     
+        {
+            name: 'Data processado',
+            selector: (row: any) => row.dt_processamento
+        },
+        {
+            name: 'SLA - D2',
+            selector: (row: any) => row.sla
+        },
+        {
+            name: 'Qtd cartões',
+            selector: (row: any) => row.total_cartoes
+        },
+     
+
+    ];
+
+    
+    const columnsInProduction: Array<Object> = [
+        {
+            name: 'Nome arquivo',
             selector: (row: any) => row.nome_arquivo_proc,
 
         },
@@ -41,18 +69,27 @@ const PageHome: React.FC = () => {
             name: 'Desc do Produto',
             selector: (row: any) => row.desc_produto,
 
-
         },
         {
-            name: 'Data Pros',
+            name: 'Desc material',
+            selector: (row: any) => row.id_tipo_material,
+            sortable: true
+        },
+        {
+            name: 'Data processado',
             selector: (row: any) => row.dt_processamento
 
         },
         {
-            name: 'Quantidade de cartões',
+            name: 'SLA - D2',
+            selector: (row: any) => row.sla
+        },
+        {
+            name: 'Qtd cartões',
             selector: (row: any) => row.total_cartoes,
             sortable: true
         }, 
+      
         {
             name: 'Etapa',
             selector: (row: any) => row.status,
@@ -60,73 +97,38 @@ const PageHome: React.FC = () => {
         },
     ];
 
-
-
-
-    const columnsAwaitingRelease: Array<Object> = [
-        {
-            name: 'Codigo do produto',
-            selector: (row: any) => row.cod_produto,
-            sortable: true
-        },
-        {
-            name: 'Nome do arquivo',
-            selector: (row: any) => row.nome_arquivo_proc
-
-        },
-        {
-            name: 'Desc do Produto',
-            selector: (row: any) => row.desc_produto
-
-        },
-        {
-            name: 'Data de entrada',
-            selector: (row: any) => row.dt_processamento
-        },
-        {
-            name: 'Qtd cartões',
-            selector: (row: any) => row.total_cartoes
-        }
-    ];
-
     const columnsAwaitingShipment: Array<Object> = [
         {
-            name: 'Codigo do produto',
-            selector: (row: any) => row.cod_produto,
-            sortable: true
-        },
-        {
-            name: 'Nome do arquivo',
+            name: 'Nome arquivo',
             selector: (row: any) => row.nome_arquivo_proc
 
         },
         {
-            name: 'Desc do Produto',
+            name: 'Desc produto',
             selector: (row: any) => row.desc_produto
 
         },
         {
-            name: 'Data de entrada',
+            name: 'Desc material',
+            selector: (row: any) => row.id_tipo_material,
+            sortable: true
+        },
+        {
+            name: 'Data processado',
             selector: (row: any) => row.dt_processamento
+        },  {
+            name: 'SLA - D2',
+            selector: (row: any) => row.sla
         },
         {
             name: 'Qtd cartões',
             selector: (row: any) => row.total_cartoes
-        },
-        {
-            name: 'Rastreio',
-            selector: (row: any) => row.rastreio
         }
     ];
 
     const columnsDispatched: Array<Object> = [
         {
-            name: 'Codigo do produto',
-            selector: (row: any) => row.cod_produto,
-            sortable: true
-        },
-        {
-            name: 'Nome do arquivo',
+            name: 'Nome arquivo',
             selector: (row: any) => row.nome_arquivo_proc
 
         },
@@ -136,11 +138,20 @@ const PageHome: React.FC = () => {
 
         },
         {
+            name: 'Desc material',
+            selector: (row: any) => row.id_tipo_material,
+            sortable: true
+        },
+        {
             name: 'Data de entrada',
             selector: (row: any) => row.dt_processamento
         },
         {
-            name: 'Data de saida',
+            name: 'SLA - D2',
+            selector: (row: any) => row.sla
+        },
+        {
+            name: 'Data Saida',
             selector: (row: any) => row.dt_expedicao
         },
         {

@@ -20,6 +20,18 @@ class DispatchedDAO extends Connection{
             foreach ($productsDispatched as &$product) {
                 $product['dt_processamento'] = date('d/m/Y', strtotime($product['dt_processamento']));
                 $product['dt_expedicao'] = date('d/m/Y', strtotime($product['dt_expedicao']));
+                
+                switch ($product['id_tipo_material']) {
+                    case 1:
+                        $product['id_tipo_material'] = 'PLÁSTICO';
+                        break;
+                    case 2:
+                        $product['id_tipo_material'] = 'FOLHETERIA';
+                        break;
+                    default:
+                        $product['id_tipo_material'] = 'desconhecido';
+                        break;
+                }
             }
 
             return $productsDispatched ;
@@ -37,6 +49,18 @@ class DispatchedDAO extends Connection{
             foreach ($productsDispatched as &$product) {
                 $product['dt_processamento'] = date('d/m/Y', strtotime($product['dt_processamento']));
                 $product['dt_expedicao'] = date('d/m/Y', strtotime($product['dt_expedicao']));
+
+                switch ($product['id_tipo_material']) {
+                    case 1:
+                        $product['id_tipo_material'] = 'PLÁSTICO';
+                        break;
+                    case 2:
+                        $product['id_tipo_material'] = 'FOLHETERIA';
+                        break;
+                    default:
+                        $product['id_tipo_material'] = 'desconhecido';
+                        break;
+                }
             }
 
             return $productsDispatched ;
